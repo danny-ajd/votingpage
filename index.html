@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가사 투표</title>
+  <style>
+    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f4f4f4; }
+    .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; cursor: pointer; border: none; border-radius: 5px; background-color: #4caf50; color: white; }
+    #message { margin-top: 20px; font-weight: bold; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="lyric-label">이 가사를 추천하시겠습니까?</h2>
+    <button onclick="submitVote()">예</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const lyricNumber = urlParams.get('lyric');
+
+    document.getElementById('lyric-label').innerText = `${lyricNumber}번 가사를 추천하시겠습니까?`;
+
+    function submitVote() {
+      const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScqib8rbEO50-KzABPURmwAV8pemnePyCXEcIGU1mNDMKjlYA/formResponse';
+      const formData = new FormData();
+      formData.append('entry.2017107205', '예');
+      formData.append('entry.96020956', lyricNumber);
+
+      fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        document.getElementById('message').innerText = '투표가 완료되었습니다! 감사합니다.';
+        setTimeout(() => {
+          window.close();
+        }, 2000);
+      }).catch(() => {
+        document.getElementById('message').innerText = '투표 중 오류가 발생했습니다.';
+      });
+    }
+  </script>
+</body>
+</html>
