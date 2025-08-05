@@ -22,7 +22,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const lyricNumber = urlParams.get('lyric');
 
-    document.getElementById('lyric-label').innerText = `${lyricNumber}번 가사를 추천하시겠습니까?`;
+    document.getElementById('lyric-label').innerText = `${lyricNumber} 가사를 추천하시겠습니까?`;
 
     function submitVote() {
       const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScqib8rbEO50-KzABPURmwAV8pemnePyCXEcIGU1mNDMKjlYA/formResponse';
