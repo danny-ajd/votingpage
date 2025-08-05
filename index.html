@@ -689,9 +689,15 @@ Nope! 여긴 128 유니버스지!<br/>
     tbody.appendChild(tr);
   });
 
+  let voted = false
+
   const form = document.querySelector('form');
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+    if (voted) {
+      alert('이미 투표가 완료되었습니다.\n\n다시 참여하실 수 없습니다 :)');
+      return
+    }
     const formData = new FormData(form);
 
     fetch('https://docs.google.com/forms/d/e/1FAIpQLScqib8rbEO50-KzABPURmwAV8pemnePyCXEcIGU1mNDMKjlYA/formResponse', {
@@ -699,13 +705,12 @@ Nope! 여긴 128 유니버스지!<br/>
       mode: 'no-cors',
       body: formData
     }).then(() => {
-      alert('투표 데이터가 콘솔에 기록되었습니다.');
-      // setTimeout(() => {
-      //   window.close();
-      // }, 2000);
+      alert('소중한 의견 감사합니다!\n\n투표가 정상적으로 제출되었습니다.');
     }).catch(() => {
-      document.getElementById('message').innerText = '투표 중 오류가 발생했습니다.';
-    });
+      alert('죄송합니다. 투표 중 문제가 발생했습니다.\n\n잠시 후 다시 시도해 주세요.');
+    }).finally(() => {
+      voted = true
+    })
   });
 </script>
 </body>
