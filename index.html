@@ -91,37 +91,27 @@
       font-weight: 500;
     }
 
-    input[type="radio"] {
-      transform: scale(1.5);
-      cursor: pointer;
-    }
-
-    button[type="submit"] {
-      position: fixed;
-      bottom: 30px;
-      right: calc(30% + 15px);
-      width: 40%;
-      height: 60px;
-      padding: 0;
-      font-size: 18px;
+    .vote-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
       font-weight: 700;
       color: #ffffff;
       background-color: #3498db;
       border: none;
-      border-radius: 30px;
+      border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
     }
 
-    button[type="submit"]:hover {
+    .vote-btn:hover {
       background-color: #2980b9;
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .vote-btn:disabled {
+      background-color: #a9a9a9;
+      cursor: not-allowed;
     }
 
     @media (max-width: 600px) {
@@ -135,12 +125,12 @@
 <body>
 
 <div class="container">
+  <h1>아정당 로고송 가사 공모전</h1>
   <form action="https://docs.google.com/forms/d/e/1FAIpQLScqib8rbEO50-KzABPURmwAV8pemnePyCXEcIGU1mNDMKjlYA/formResponse"
         method="POST" target="_blank">
     <input style="display: none" name="entry.2017107205" value="예">
     <div id="candidate-list">
     </div>
-    <button type="submit">투표하기</button>
   </form>
 </div>
 
@@ -278,7 +268,7 @@
         '<audio controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/8-2.mp3"></audio>' +
         '<audio controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/8-3.mp3"></audio>' +
         '<audio controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/8-4.mp3"></audio>',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -288,7 +278,7 @@
         그곳이 파라다이스 아정당`,
       lyrics2: '속지마들렌, 걱정마카롱, 부담없슈<br/>세상을 아름답고 정당하게',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -321,7 +311,7 @@
 나의 이름을 잊지말아요
 아정당`,
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -336,7 +326,7 @@
 생활의 모든 길에 '아정당'`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -346,14 +336,14 @@
 아정당~ 하이~ 나니가스키~<br/>안 부서지게 조심조심~ 이사.한.당.
 아정당~ 하이~ 나니가스키~<br/>신혼집에 필요한거 다~ 렌탈한.당.`,
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
         `아아아짜로 시작하는 말~<br/>아정당 아정당 아정당 아정당<br/>홈서비스 전문기업 아정당~`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -367,7 +357,7 @@
 같이 가요, 아! 정! 당!`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -386,9 +376,9 @@
 혜택을 아름답고 정당하게
 [Hook (Outro)]
 이게 바로 진짜 라이프 해킹`,
-      lyrics2: ``,
+      lyrics2: '',
       media: '<audio controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/15.mp3"></audio>',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -399,7 +389,7 @@
 아정당, 지금 함께하세요`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -419,7 +409,7 @@
 아↗ 정↘ 당↗!`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -430,7 +420,7 @@
 생활에 모든 혜택 모으고 모아서 (아)정당하게 그대에게 드려요`,
       lyrics2: '',
       media: '<audio controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/18.m4a"></audio>',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -509,7 +499,7 @@ Nope! 여긴 128 유니버스지!
 믿고 쓰는 No.1 아정당이면 됐어`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -529,7 +519,7 @@ Nope! 여긴 128 유니버스지!
 우리들의 아정당.”`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -548,7 +538,7 @@ Nope! 여긴 128 유니버스지!
 아~ 정~ 당 (당!)`,
       lyrics2: '',
       media: `<audio controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/22.mp3"/>`,
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -569,7 +559,7 @@ Nope! 여긴 128 유니버스지!
 정직 정확 서비스
 당일 지급 아정당~!`,
       media: '',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -592,7 +582,7 @@ Nope! 여긴 128 유니버스지!
 혜택이 넘치는 아정당 타임~
 지원금은 아!정!당!~`,
       media: '',
-      notes: ``
+      notes: ''
     }, {
       lyrics1:
         `[짝사랑 스타일 감성 .ver]
@@ -626,7 +616,7 @@ Nope! 여긴 128 유니버스지!
 아주 정확한 당신의 선택!
 아정당!`,
       media: '<video controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/25.mp4"/>',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -641,9 +631,9 @@ Nope! 여긴 128 유니버스지!
 (상담은?) 언제든지!
 묻지도 따지지도 말고 이젠 아정당!
 생활 솔루션, 정답은 아정당!`,
-      lyrics2: ``,
+      lyrics2: '',
       media: '<video controls src="https://cdn.ajd.kr/images/hosting/799711ba-7959-4b75-21a5-03475470654e/logo_songs/26.mp4"/>',
-      notes: ``
+      notes: ''
     },
     {
       lyrics1:
@@ -664,7 +654,69 @@ Nope! 여긴 128 유니버스지!
 정당한 거래 아정당!! / 정정당당 아정당`,
       lyrics2: '',
       media: '',
-      notes: ``
+      notes: ''
+    },
+    {
+      lyrics1:
+        `1. 아정당역 – 기차역 비유
+
+♪ 삶이 바빠 멈출 틈 없을 땐
+여기서 잠시 쉬어가요
+
+♪ 인터넷선 첫 차 타고
+렌탈역 한 번 환승하면
+알뜰폰 열차가 기다려요
+
+♪ 인테리어 카페역 들렀다가
+청소역, 이사역에서 내리면
+집도 마음도 새단장 완료!
+
+♪ 종착지는 '부동산 중앙역'
+카드비교 터널 지나
+화장품 햇살역에 도착!
+
+♪ 내 일상 여행의 출발점
+이곳은 아–정–당역입니다 `,
+      lyrics2: `2. 아정당 약국 – 솔루션 제공 비유
+
+♪ 머리 아픈 통신비엔
+인터넷 진통제 한 알
+
+♪ 매달 나가는 렌탈비엔
+정리정돈 캡슐 한 봉지
+
+♪ 알뜰폰은 가성비 처방
+청소 스트레스엔 청량제 쿨~ 한 잔
+
+♪ 이사피로엔 근육완화제
+인테리어 고민엔 미적 보충제
+부동산엔 방향성 주사
+카드비교엔 절약형 플라스타
+
+♪ 삶의 증상을 다스리는  생활주치의,
+생활 처방은 아정당 약국입니다 `,
+      lyrics3: `3. 아정당 커피 – 카페 메뉴 비유
+
+♪ 내 하루의 시작은 한 잔의
+아정당 블렌드로 깔끔하게
+
+♪ 통신요금은 아메리카노처럼
+쓰지만 정리되면 개운해
+
+♪ 렌탈은 라떼처럼 부드럽고
+알뜰폰은 샷추가 안 해도 진함
+
+♪ 이사와 청소는 얼음 녹듯
+인테리어는 휘핑 얹은 감성
+
+♪ 부동산은 고소한 향미,
+카드비교는 사이드 메뉴
+화장품은 포장까지 완벽!
+
+♪ 오늘도 한 잔, 삶의 온기
+아정당 커피바입니다`,
+      media: '',
+      notes: ''
     },
   ];
 
@@ -676,7 +728,6 @@ Nope! 여긴 128 유니버스지!
     card.innerHTML = `
     <div class="card-header">
       <h3>후보 ${index + 1}</h3>
-      <input type="radio" name="entry.96020956" value="${index + 1}번" required>
     </div>
     <div class="card-body">
       <h4>가사</h4>
@@ -688,32 +739,45 @@ Nope! 여긴 128 유니버스지!
       ${candidate.media ? `<div class="media-section"><h4>미디어</h4>${candidate.media}</div>` : ''}
       ${candidate.notes ? `<div class="notes-section"><h4>참고</h4>${candidate.notes}</div>` : ''}
     </div>
+    <button class="vote-btn" data-candidate-index="${index}">투표하기</button>
   `;
     list.appendChild(card);
   });
 
-  let voted = false
+  const votedCandidates = new Set();
 
-  const form = document.querySelector('form');
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    if (voted) {
-      alert('이미 투표가 완료되었습니다.\n\n다시 참여하실 수 없습니다 :)');
-      return
+  list.addEventListener('click', function (event) {
+    if (event.target.classList.contains('vote-btn')) {
+      const button = event.target;
+      const candidateIndex = parseInt(button.dataset.candidateIndex, 10);
+
+      if (votedCandidates.has(candidateIndex)) {
+        alert('이미 투표했습니다.');
+        return;
+      }
+
+      const form = document.querySelector('form');
+      const formData = new FormData(form);
+      formData.append('entry.96020956', `${candidateIndex + 1}번`);
+
+
+      button.disabled = true;
+      button.textContent = '투표 중...';
+
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLScqib8rbEO50-KzABPURmwAV8pemnePyCXEcIGU1mNDMKjlYA/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        alert('소중한 의견 감사합니다!\n\n투표가 정상적으로 제출되었습니다.');
+        votedCandidates.add(candidateIndex);
+        button.textContent = '투표 완료';
+      }).catch(() => {
+        alert('죄송합니다. 투표 중 문제가 발생했습니다.\n\n잠시 후 다시 시도해 주세요.');
+        button.disabled = false;
+        button.textContent = '이 후보에게 투표하기';
+      });
     }
-    const formData = new FormData(form);
-
-    fetch('https://docs.google.com/forms/d/e/1FAIpQLScqib8rbEO50-KzABPURmwAV8pemnePyCXEcIGU1mNDMKjlYA/formResponse', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    }).then(() => {
-      alert('소중한 의견 감사합니다!\n\n투표가 정상적으로 제출되었습니다.');
-    }).catch(() => {
-      alert('죄송합니다. 투표 중 문제가 발생했습니다.\n\n잠시 후 다시 시도해 주세요.');
-    }).finally(() => {
-      voted = true
-    })
   });
 </script>
 </body>
